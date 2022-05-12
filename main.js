@@ -1,7 +1,7 @@
 'use strict';
 console.log("Funcionando...")
 
-// import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth } from "firebase/auth";
 
 // SingIn
 const signInForm = document.querySelector('#signInForm');
@@ -31,17 +31,17 @@ const signUpForm = document.querySelector('#signUpForm');
 signUpForm.addEventListener('submit', e => {
 
   e.preventDefault();
-  // const auth = getAuth();
+  const auth = getAuth();
   const email = document.querySelector('#emailSignUp').value;
   const password = document.querySelector('#passwordSignUp').value;
 
-  // auth
-  //     .createUserWithEmailAndPassword(auth, email, password)
-  //     .then((userCredential) => {
-  //       // Signed in
-  //       const user = userCredential.user;
-        
-  //     })
+  auth
+      .createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        console.log('registrado')
+      })
 
   console.log(email,password)
 })
