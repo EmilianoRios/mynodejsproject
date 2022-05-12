@@ -21,7 +21,7 @@ signInForm.addEventListener('submit', e => {
 
   //     })
 
-  console.log(email,password)
+  console.log(email,password);
 
 })
 
@@ -35,13 +35,11 @@ signUpForm.addEventListener('submit', e => {
   const email = document.querySelector('#emailSignUp').value;
   const password = document.querySelector('#passwordSignUp').value;
 
-  auth
-      .createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        // Signed in
-        const user = userCredential.user;
-        console.log('registrado')
-      })
-
-  console.log(email,password)
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed in
+      const user = userCredential.user;
+      console.log('registrado');
+    })
+  console.log(email,password);
 })
