@@ -1,7 +1,7 @@
 'use strict';
 console.log("Funcionando...")
 
-import { getAuth } from "firebase/auth";
+import { getAuth } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-auth.js";
 
 // SingIn
 const signInForm = document.querySelector('#signInForm');
